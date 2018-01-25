@@ -19,9 +19,15 @@ G = 100
 # planet3 = Planet(4, 20, (0, 0, 0), (0, 0, 0))
 
 # two stars
-planet1 = Planet(1, 1/10, (40, 0, 0), (0, 0.9, 0))
-planet2 = Planet(4, 10, (20, 0, 0), (0, -20, 0))
-planet3 = Planet(4, 10, (-20, 0, 0), (0, 20, 0))
+# planet1 = Planet(1, 1/10, (40, 0, 0), (0, 0.9, 0))
+# planet2 = Planet(4, 10, (20, 0, 0), (0, -20, 0))
+# planet3 = Planet(4, 10, (-20, 0, 0), (0, 20, 0))
+
+# earth moon sun
+planet1 = Planet(1, 1/10, (-72.0, 0, 0), (0, -1, 0))
+planet2 = Planet(5, 1, (-80, 0, 0), (0, -6, 0))
+planet3 = Planet(10, 30, (0, 0, 0), (0, 0, 0))
+
 
 
 # creating orbs
