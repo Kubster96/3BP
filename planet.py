@@ -1,6 +1,4 @@
-
 class Planet:
-
     radius = 0
 
     mass = 0
@@ -14,7 +12,6 @@ class Planet:
     momentum_z = 0
 
     def __init__(self, r, m, position, momentum):
-
         self.radius = r
         self.mass = m
         self.position_x = position[0]

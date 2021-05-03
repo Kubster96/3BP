@@ -1,39 +1,21 @@
 from vpython import *
 
-from Planet import Planet
+from planet import Planet
 
 G = 100
 
-# just for init Planet(radius, mass, position, momentum)
-# planet1 = Planet(1, 1, (4.5, 0, 0), (0, 2, 0))
-# planet2 = Planet(1, 1, (-4.5, 0, 0), (0, -3, 0))
-# planet3 = Planet(1, 0.1, (-10, 0, 0), (0, 0.1, 0))
-
-# planet1 = Planet(2, 1, (5.5, 0, 0), (0, 2, 0))
-# planet2 = Planet(1, 1, (-4.5, 0, 0), (0, -3, 0))
-# planet3 = Planet(3, 5, (-30, 0, 0), (0, 0.01, 0))
-
-# one big inside two small orbiting
-# planet1 = Planet(1, 1/10, (20, 0, 0), (0, 1, 0))
-# planet2 = Planet(1, 2/10, (-10, 0, 0), (0, -3, 0))
-# planet3 = Planet(4, 20, (0, 0, 0), (0, 0, 0))
-
-# two stars
-# planet1 = Planet(1, 1/10, (40, 0, 0), (0, 0.9, 0))
-# planet2 = Planet(4, 10, (20, 0, 0), (0, -20, 0))
-# planet3 = Planet(4, 10, (-20, 0, 0), (0, 20, 0))
-
 # earth moon sun
-planet1 = Planet(1, 1/10, (-72.0, 0, 0), (0, -1, 0))
+planet1 = Planet(1, 1 / 10, (-72.0, 0, 0), (0, -1, 0))
 planet2 = Planet(5, 1, (-80, 0, 0), (0, -6, 0))
 planet3 = Planet(10, 30, (0, 0, 0), (0, 0, 0))
 
-
-
 # creating orbs
-orb1 = sphere(pos=vector(planet1.position_x, planet1.position_y, planet1.position_z), radius=planet1.radius, color=color.yellow)
-orb2 = sphere(pos=vector(planet2.position_x, planet2.position_y, planet2.position_z), radius=planet2.radius, color=color.orange)
-orb3 = sphere(pos=vector(planet3.position_x, planet3.position_y, planet3.position_z), radius=planet3.radius, color=color.cyan)
+orb1 = sphere(pos=vector(planet1.position_x, planet1.position_y, planet1.position_z), radius=planet1.radius,
+              color=color.yellow)
+orb2 = sphere(pos=vector(planet2.position_x, planet2.position_y, planet2.position_z), radius=planet2.radius,
+              color=color.orange)
+orb3 = sphere(pos=vector(planet3.position_x, planet3.position_y, planet3.position_z), radius=planet3.radius,
+              color=color.cyan)
 
 orb1.m = planet1.mass
 orb2.m = planet2.mass
@@ -46,7 +28,6 @@ orb3.p = vector(planet3.momentum_x, planet3.momentum_y, planet3.momentum_z)
 attach_trail(orb1)
 attach_trail(orb2)
 attach_trail(orb3)
-
 
 t = 0
 dt = 0.0005
